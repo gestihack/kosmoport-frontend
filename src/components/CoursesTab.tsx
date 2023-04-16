@@ -2,6 +2,9 @@ import { FunctionComponent } from "react";
 import CourseCard from "./CourseCard";
 import { useQuery } from "react-query";
 import { COURSES, fn } from "../Contraints";
+import modelling from "../assets/modelling.png";
+import programming from "../assets/PROGRAMMING.png";
+import projects from "../assets/PROJECTS.png";
 
 export interface Course {
     id:                number;
@@ -42,6 +45,18 @@ interface CourcesTabProps {
 }
 
 const Courses: FunctionComponent<CourcesTabProps> = (props) => {
+    let chooseIcon = (s: string) => {
+        if (s == "MODELLING") {
+            return modelling;
+        }
+        else if (s == "PROGRAMMING") {
+            return programming;
+        }
+        else {
+            return projects;
+        }
+    }
+
     let { data, isFetched } = useQuery({
         queryKey: ["courses"],
         queryFn: () => fn(COURSES, { token: props.token }),
@@ -62,7 +77,7 @@ const Courses: FunctionComponent<CourcesTabProps> = (props) => {
                         subtitle={el.place}
                         description={el.description}
                         age={el.age}
-                        icon={new URL(`src/assets/${el.icon}.png`, import.meta.url).href}
+                        icon={chooseIcon(el.icon)}
                         available={el.people - el.users.length}
                     />
                 ))
