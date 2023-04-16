@@ -8,7 +8,7 @@ interface VkAuthButtonProps {
  
 const VkAuthButton: FunctionComponent<VkAuthButtonProps> = () => {
     // console.log(VK_APPID);
-    let vk_oath_url = `https://oauth.vk.com/authorize?client_id=${VK_APPID}&display=page&redirect_uri=https://kp.gesti.tech/&scope=offline,email&response_type=token&v=5.131&state=123456`;
+    let vk_oath_url = `https://oauth.vk.com/authorize?client_id=${VK_APPID}&display=page&redirect_uri=https://kp.gesti.tech/oauth/&scope=offline,email&response_type=token&v=5.131&state=123456`;
 
     return ( 
         <div className="py-6 content-center self-center pr-7">
