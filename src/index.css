@@ -1,0 +1,45 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-span {
+    @apply text-gray
+}
+.card-value {
+    @apply  text-[#000]
+}
+
+.rti--container {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    --rti-border: theme('colors.gray.light') !important;
+}
+*:focus {
+    /* outline-color: theme('colors.red'); */
+    outline: none;
+}
+.binput {
+    /* border-color: theme('colors.blue.DEFAULT') !important; */
+}
+.rti--input {
+    flex: 1;
+    font-size: 20px;
+    outline: none;
+    font-weight: 700;
+}
+
+
+.course-tab {
+    @apply text-2xl font-bold cursor-pointer select-none
+}
+.course-tab-selected {
+    @apply underline text-black
+}
+.text-secondary {
+    @apply text-gray
+}
