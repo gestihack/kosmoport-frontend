@@ -46,12 +46,12 @@ const Header: FunctionComponent<HeaderProps> = (props) => {
                     icon={cources_logo}
                     onClick={() => props.setCurrTab(HeaderTabs.COURCES)}
                 />
-                <HeaderTab
+                {props.user ? <HeaderTab
                     title="Мои курсы"
                     active={props.currTab == HeaderTabs.MY_COURCES}
                     icon={my_cources_logo}
                     onClick={() => props.setCurrTab(HeaderTabs.MY_COURCES)}
-                />
+                /> : <></>}
             </div>
 
             <div className="flex flex-row justify-end">
