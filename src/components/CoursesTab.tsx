@@ -62,7 +62,7 @@ const Courses: FunctionComponent<CourcesTabProps> = (props) => {
                         subtitle={el.place}
                         description={el.description}
                         age={el.age}
-                        icon={`/src/assets/${el.icon}.png`}
+                        icon={`@/assets/${el.icon}.png`}
                         available={el.people - el.users.length}
                     />
                 ))
